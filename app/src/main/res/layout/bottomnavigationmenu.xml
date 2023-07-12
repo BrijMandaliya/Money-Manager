@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:background="#F3AF05">
+
+            <TextView
+                android:id="@+id/homebtn"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/round1"
+                android:foregroundTint="#D1B05F"
+                android:foreground="@drawable/ic_launcher_homepage_foreground"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="40dp"/>
+
+            <TextView
+                android:id="@+id/analysisbtn"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:foregroundTint="#ffffff"
+                android:foreground="@drawable/ic_launcher_analysis_foreground"
+                android:gravity="center"
+                android:layout_marginRight="40dp"/>
+            <TextView
+                android:id="@+id/settingbtn"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:foregroundTint="#ffffff"
+                android:foreground="@drawable/ic_launcher_setting_foreground"
+                android:gravity="center"
+                android:layout_marginRight="50dp"/>
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/plusbtn"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:lottie_rawRes="@raw/symbolplus"
+                android:background="@drawable/round1"
+                app:lottie_autoPlay="true"
+                android:layout_gravity="center">
+
+            </com.airbnb.lottie.LottieAnimationView>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

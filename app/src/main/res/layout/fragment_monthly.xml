@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MonthlyFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundcolor">
+
+    <RelativeLayout
+        android:id="@+id/monthlyheader"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <ImageButton
+            android:id="@+id/leftbtnformonth"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/ic_launcher_leftbtn_foreground"
+            android:background="#00000000"></ImageButton>
+
+        <TextView
+            android:id="@+id/specificmonth"
+            android:gravity="center"
+            android:textColor="@color/textcolor"
+            android:layout_centerHorizontal="true"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp">
+        </TextView>
+
+        <ImageButton
+            android:id="@+id/rightbtnformonth"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_launcher_rightbtn_foreground"
+            android:foregroundTint="@color/textcolor"
+            android:backgroundTint="#00000000"></ImageButton>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/monthlynocontent"
+        android:layout_width="match_parent"
+        android:layout_height="660dp"
+        android:layout_marginTop="20dp"
+        android:visibility="gone">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:lottie_rawRes="@raw/nodata"
+            app:lottie_autoPlay="true"></com.airbnb.lottie.LottieAnimationView>
+    </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/monthlycontent"
+            android:layout_below="@+id/monthlyheader"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/monthlyamount"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/round"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textColor="#fff"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:visibility="invisible"></TextView>
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/monthlypriceshimmer"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="20dp"
+                android:visibility="invisible">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/round"
+                    android:backgroundTint="#ECCF89"></ImageView>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/categorycontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/monthlyamount"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/categoriesbackgroundcolor"
+                android:padding="10dp"
+                android:visibility="invisible">
+
+                <TextView
+                    android:id="@+id/categorywisespendinginfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="Category-Wise Spending"
+                    android:textColor="@color/textcolor"
+                    android:textSize="15dp"></TextView>
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/categorymonthpiechart"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:layout_below="@+id/categorywisespendinginfo"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="-20dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"></com.github.mikephil.charting.charts.PieChart>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/categorywiseitems"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/categorymonthpiechart"></androidx.recyclerview.widget.RecyclerView>
+
+            </RelativeLayout>
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/monthlycategoryshimmer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:layout_below="@+id/monthlyamount"
+                android:visibility="invisible">
+                <include layout="@layout/placeholdereffect"></include>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>

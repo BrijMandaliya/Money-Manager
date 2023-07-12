@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TransactionPage">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/transactiontoolbar"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="#F3AF05">
+
+            <ImageView
+                android:id="@+id/backbuttonontransactionpage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:paddingLeft="-20dp"
+                android:src="@drawable/backarrow_foreground">
+            </ImageView>
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="Add Transaction"
+                android:textAllCaps="true"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold"></TextView>
+
+            <ImageView
+                android:id="@+id/transactiondeletebtn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="right"
+                android:src="@drawable/delete_foreground"
+                android:visibility="gone"></ImageView>
+        </androidx.appcompat.widget.Toolbar>
+
+        <RelativeLayout
+            android:id="@+id/datavalue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/transactiontoolbar"
+            android:layout_marginTop="30dp"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/dayviewimg"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:foreground="@drawable/dayview_foreground"
+                android:foregroundTint="@color/textcolor"></ImageView>
+
+            <EditText
+                android:id="@+id/dateview"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:enabled="false"
+                android:layout_toRightOf="@+id/dayviewimg"
+                android:backgroundTint="#594D4D"
+                android:textColor="@color/textcolor"
+                android:gravity="center|left"
+                android:textSize="20dp"></EditText>
+
+            <ImageView
+                android:id="@+id/rupeesymbol"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_below="@id/dayviewimg"
+                android:layout_marginLeft="-10dp"
+                android:foreground="@drawable/rupee_foreground"
+                android:foregroundTint="@color/textcolor"></ImageView>
+
+            <EditText
+                android:id="@+id/amount"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@id/dateview"
+                android:layout_toEndOf="@+id/rupeesymbol"
+                android:backgroundTint="#594D4D"
+                android:hint="Enter Amount"
+                android:inputType="number"></EditText>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/selectcategory"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/datavalue"
+            android:layout_marginLeft="20dp"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/categoryimg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                ></ImageView>
+
+            <TextView
+                android:id="@+id/selectedcategory"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_toEndOf="@+id/categoryimg"
+                android:gravity="left"
+                android:text="Select Category"
+                android:textSize="25dp"></TextView>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="200dp"
+                android:src="@drawable/ic_launcher_rightbtn_foreground"></ImageView>
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/otherdetailsID"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@id/selectcategory"
+            android:layout_marginTop="50dp"
+            android:backgroundTint="#D1CFCF"
+            android:enabled="false"
+            android:paddingLeft="20dp"
+            android:text="Other Details"
+            android:textColor="#918A8A"
+            android:textSize="20dp"></EditText>
+
+        <RelativeLayout
+            android:id="@+id/notes"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@id/otherdetailsID"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/notesimg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:foreground="@drawable/notes_foreground"
+                android:foregroundTint="@color/textcolor"></ImageView>
+
+            <EditText
+                android:id="@+id/Description"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="20dp"
+                android:layout_toEndOf="@+id/notesimg"
+                android:gravity="left"
+                android:hint="Note"></EditText>
+        </RelativeLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/savebutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="#E6BC54"
+            android:clickable="true"
+            android:foreground="@android:drawable/ic_menu_save"
+            android:foregroundTint="#251803"
+            android:foregroundGravity="center"
+            android:windowSoftInputMode="adjustResize" />
+    </RelativeLayout>
+</FrameLayout>

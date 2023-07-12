@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePpage">
+
+<RelativeLayout
+    android:id="@+id/homepagedata"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/userinfoheader"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        >
+
+        <TextView
+            android:id="@+id/hpwish"
+            android:layout_width="110dp"
+            android:textColor="@color/textcolor"
+            android:layout_height="17dp"
+            android:textSize="30px"
+            android:text="Good Afternoon"></TextView>
+
+        <TextView
+            android:id="@+id/hpusername"
+            android:layout_below="@+id/hpwish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textcolor"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:visibility="invisible"></TextView>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/homepageshimmer3"
+            android:layout_below="@+id/hpwish"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:visibility="invisible">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/round"
+                android:backgroundTint="#ECCF89"></ImageView>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="-25dp"
+            android:src="@drawable/ic_launcher_userlogo_foreground"></de.hdodenhof.circleimageview.CircleImageView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/moneyspenddata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userinfoheader"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/hpthismonth"
+            android:layout_width="wrap_content"
+            android:textColor="@color/textcolor"
+            android:layout_height="30dp"
+            android:textSize="20dp"
+            android:text="This Month"></TextView>
+
+        <TextView
+            android:id="@+id/hpmonthspend"
+            android:visibility="invisible"
+            android:layout_below="@+id/hpthismonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:padding="10dp"
+            android:text=""
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:textColor="#fff"
+            android:background="@drawable/round"></TextView>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/homepageshimmer2"
+            android:layout_below="@+id/hpthismonth"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:visibility="invisible">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/round"
+                android:backgroundTint="#ECCF89"></ImageView>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/hptransactiondata"
+        android:layout_width="match_parent"
+        android:layout_height="485dp"
+        android:layout_below="@+id/moneyspenddata"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/transactioninfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textcolor"
+            android:text="Transaction"
+            android:textSize="20dp"></TextView>
+
+        <TextView
+            android:id="@+id/seeall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textcolor"
+            android:layout_alignParentEnd="true"
+            android:text="See All"></TextView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvhomepage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/transactioninfo"
+            android:layout_marginTop="10dp"
+            android:visibility="invisible"></androidx.recyclerview.widget.RecyclerView>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/homepageshimmer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/transactioninfo"
+            android:visibility="invisible">
+            <include layout="@layout/placeholdereffect"></include>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
+
+
+
+
+</FrameLayout>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Settingfragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:id="@+id/profileinfo"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:padding="10dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/settingprofilephoto"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginLeft="-25dp"
+                android:foreground="@drawable/ic_launcher_userlogo_foreground"
+                ></de.hdodenhof.circleimageview.CircleImageView>
+
+            <TextView
+                android:id="@+id/profilename"
+                android:textColor="@color/textcolor"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginTop="17dp"
+                android:layout_width="90dp"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@+id/settingprofilephoto"
+                android:gravity="center_vertical"></TextView>
+
+            <TextView
+                android:id="@+id/profileemail"
+                android:textColor="@color/textcolor"
+                android:layout_marginTop="-10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_below="@+id/profilename"
+                android:layout_toRightOf="@+id/settingprofilephoto"
+                android:gravity="center_vertical"></TextView>
+        </RelativeLayout>
+        
+        <LinearLayout
+            android:id="@+id/options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profileinfo"
+            android:orientation="vertical">
+            
+            <RelativeLayout
+                android:id="@+id/transactionbox"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/transactionlogo"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/transactionlogopreview"></ImageView>
+
+                <TextView
+                    android:id="@+id/transactionopt"
+                    android:layout_toEndOf="@+id/transactionlogo"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/textcolor"
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Transaction"></TextView>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="200dp"
+                    android:src="@drawable/ic_launcher_rightbtn_foreground"></ImageView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/categorybox"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/categoryimg"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/categoryiconpreview"></ImageView>
+
+                <TextView
+                    android:id="@+id/categoryopt"
+                    android:layout_toEndOf="@+id/categoryimg"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/textcolor"
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Category"></TextView>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="200dp"
+                    android:src="@drawable/ic_launcher_rightbtn_foreground"></ImageView>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/viewoption"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_below="@+id/options"
+            android:layout_marginTop="50dp"
+            android:padding="5dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/dayviewopt"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:background="@drawable/backgroundforview"
+                android:drawableTop="@drawable/dayview_foreground"
+                android:drawableTint="@color/black"
+                android:drawablePadding="-30dp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:text="Day View"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/settingitems"
+            android:layout_below="@+id/viewoption"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp">
+
+            <RelativeLayout
+                android:id="@+id/themebox"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/Themeoption"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20dp"
+                    android:textColor="@color/textcolor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Theme"></TextView>
+
+                <TextView
+                    android:id="@+id/selectedthemeinfo"
+                    android:layout_marginLeft="30dp"
+                    android:layout_below="@+id/Themeoption"
+                    android:textColor="@color/textcolor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="Select Theme"></TextView>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_height="50dp"
+                    android:foregroundTint="@color/textcolor"
+                    android:layout_marginLeft="200dp"
+                    android:src="@drawable/ic_launcher_rightbtn_foreground"></ImageView>
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/logoutbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FBC02D"
+                android:text="Logout"
+                android:layout_gravity="center"></Button>
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>

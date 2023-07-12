@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/transactionitemid"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="20dp"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/amountdisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:textSize="15dp"
+            android:textColor="#000000"
+            android:text="200.0"></TextView>
+
+        <TextView
+            android:id="@+id/transactiondescription"
+            android:layout_below="@+id/amountdisplay"
+            android:text="Not Specified"
+            android:layout_width="wrap_content"
+            android:textColor="#000000"
+            android:textSize="10dp"
+            android:layout_height="30dp"></TextView>
+        
+        <TextView
+            android:id="@+id/tvdatedisplay"
+            android:textSize="10dp"
+            android:textColor="#000000"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"></TextView>
+
+        <TextView
+            android:id="@+id/categorydisplay"
+            android:textSize="10dp"
+            android:layout_below="@+id/tvdatedisplay"
+            android:textColor="#000000"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"></TextView>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

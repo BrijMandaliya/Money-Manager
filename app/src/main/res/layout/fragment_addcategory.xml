@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".addcategory">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/addcategorypagetoolbar"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="#F3AF05">
+
+            <ImageView
+                android:id="@+id/backbuttononaddcategorypage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:paddingLeft="-20dp"
+                android:src="@drawable/backarrow_foreground">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/addcategoryheader"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:gravity="center|left"
+                android:text="Add Category"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"></TextView>
+
+            <ImageView
+                android:id="@+id/categorypagedeletebtn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="right"
+                android:src="@drawable/delete_foreground"
+                android:visibility="gone"></ImageView>
+        </androidx.appcompat.widget.Toolbar>
+
+        <RelativeLayout
+            android:id="@+id/datavalue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/addcategorypagetoolbar"
+            android:layout_marginTop="30dp"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/dayviewimg"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:foreground="@drawable/textformat_foreground"
+                android:foregroundTint="@color/textcolor"></ImageView>
+
+            <EditText
+                android:id="@+id/CategoyName"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_toRightOf="@+id/dayviewimg"
+                android:textColor="@color/textcolor"
+                android:backgroundTint="#594D4D"
+                android:gravity="center|left"
+                android:hint="Enter Category Name"
+                android:textSize="20dp"></EditText>
+
+            <ImageView
+                android:id="@+id/rupeesymbol"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_below="@id/dayviewimg"
+                android:foreground="@drawable/lines1_foreground"
+                android:foregroundTint="@color/textcolor"></ImageView>
+
+            <EditText
+                android:id="@+id/categorydescription"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@id/CategoyName"
+                android:textColor="@color/textcolor"
+                android:layout_toEndOf="@+id/rupeesymbol"
+                android:backgroundTint="#594D4D"
+                android:hint="Enter Description"></EditText>
+
+            <TextView
+                android:id="@+id/categorycolor"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/rupeesymbol"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:background="#ff00ff"></TextView>
+
+            <Button
+                android:id="@+id/selectcolorbtn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/categorydescription"
+                android:foreground="@drawable/colorpicker_foreground"
+                android:foregroundTint="@color/textcolor"
+                android:layout_margin="10dp"
+                android:layout_toRightOf="@+id/categorycolor"
+                android:background="#00000000"></Button>
+        </RelativeLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/categoryaddbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="20dp"
+            android:backgroundTint="#E6BC54"
+            android:clickable="true"
+            android:foreground="@android:drawable/ic_menu_save"
+            android:foregroundGravity="center"
+            android:foregroundTint="#251803"
+            android:windowSoftInputMode="adjustResize"/>
+    </RelativeLayout>
+</FrameLayout>

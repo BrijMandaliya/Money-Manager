@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".WeeklyFragment">
+
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+        android:background="@color/backgroundcolor">
+
+        <RelativeLayout
+            android:id="@+id/weeklyheader"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <ImageButton
+                android:id="@+id/leftbtnforweek"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/ic_launcher_leftbtn_foreground"
+                android:backgroundTint="#00000000"></ImageButton>
+
+            <TextView
+                android:id="@+id/specificweek"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:textSize="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp">
+            </TextView>
+
+            <ImageButton
+                android:id="@+id/rightbtnforweek"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_launcher_rightbtn_foreground"
+                android:backgroundTint="#00000000"></ImageButton>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/weeklynocontentlayout"
+            android:layout_below="@+id/weeklyheader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/nodata"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:lottie_autoPlay="true"
+                app:lottie_rawRes="@raw/nodata"></com.airbnb.lottie.LottieAnimationView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/weeklycontentlayout"
+            android:layout_below="@+id/weeklyheader"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/weeklyamount"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/round"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textColor="#fff"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:visibility="invisible"></TextView>
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/weeklypriceshimmer"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="20dp"
+                android:visibility="invisible">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/round"
+                    android:backgroundTint="#ECCF89"></ImageView>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/weeklycategorycontent"
+                android:layout_below="@+id/weeklyamount"
+                android:layout_margin="20dp"
+                android:padding="10dp"
+                android:background="@color/categoriesbackgroundcolor"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="invisible">
+s
+                <TextView
+                    android:id="@+id/categorywisespendinginfo"
+                    android:layout_marginLeft="10dp"
+                    android:text="Category-Wise Spending"
+                    android:textColor="@color/textcolor"
+                    android:textSize="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"></TextView>
+
+                        <com.github.mikephil.charting.charts.PieChart
+                            android:id="@+id/categoryweekpiechart"
+                            android:layout_width="250dp"
+                            android:layout_height="250dp"
+                            android:layout_below="@+id/categorywisespendinginfo"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="-20dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="10dp"></com.github.mikephil.charting.charts.PieChart>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/categorywiseitemsweekly"
+                    android:layout_below="@+id/categoryweekpiechart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+
+            </RelativeLayout>
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/weeklycategoryshimmer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:layout_below="@+id/weeklyamount"
+                android:visibility="invisible">
+                <include layout="@layout/placeholdereffect"></include>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+        </RelativeLayout>
+</RelativeLayout>
+
+</FrameLayout>

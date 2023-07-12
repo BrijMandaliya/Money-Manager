@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundcolor">
+
+    <TextView
+        android:id="@+id/selectthemeinfo"
+        android:textColor="@color/textcolor"
+        android:text="Choose Theme"
+        android:layout_marginTop="20dp"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView>
+
+   <RadioGroup
+       android:id="@+id/themeradiogroup"
+       android:layout_below="@+id/selectthemeinfo"
+       android:layout_margin="10dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <RadioButton
+           android:id="@+id/LightMode"
+           android:text="Light Mode"
+           android:textSize="20dp"
+           android:textColor="@color/textcolor"
+           android:padding="20dp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:onClick="lightmodeselected"></RadioButton>
+       <RadioButton
+           android:id="@+id/DarkMode"
+           android:text="Dark Mode"
+           android:textSize="20dp"
+           android:textColor="@color/textcolor"
+           android:padding="20dp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:onClick="darkmodeselected"></RadioButton>
+   </RadioGroup>
+
+</RelativeLayout>

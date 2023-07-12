@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:animationCache="true"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/startpagetoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#F3AF05">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="Money Manager"
+            android:textAllCaps="true"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"></TextView>
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/startpagedesign"
+        android:layout_width="wrap_content"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        android:layout_height="500dp"
+        app:lottie_rawRes="@raw/startpagedesign"
+        android:layout_below="@+id/startpagetoolbar">
+    </com.airbnb.lottie.LottieAnimationView>
+
+    <TextView
+        android:id="@+id/startpageinfotext"
+        android:layout_width="249dp"
+        android:layout_height="29dp"
+        android:layout_below="@+id/startpagedesign"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="1dp"
+        android:bufferType="normal"
+        android:cursorVisible="true"
+        android:fontFamily="@font/aclonica"
+        android:text="Welcome To Money Manager"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:textAlignment="center"></TextView>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/getstartbtn"
+        app:lottie_autoPlay="true"
+        android:layout_below="@+id/startpageinfotext"
+        android:layout_centerHorizontal="true"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        app:lottie_rawRes="@raw/getstartbutton"></com.airbnb.lottie.LottieAnimationView>
+</RelativeLayout>
